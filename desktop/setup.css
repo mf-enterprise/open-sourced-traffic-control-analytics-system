@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #0b1019;
+  color: #eaf1fb;
+  font-family: "Segoe UI", Arial, sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+main {
+  width: min(580px, 86vw);
+  padding: 58px 0;
+}
+.mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border: 1px solid #334764;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #173049, #111d2d);
+  font-weight: 750;
+  font-size: 25px;
+  letter-spacing: -2px;
+}
+.mark span {
+  width: 9px;
+  height: 9px;
+  background: #64e4bd;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  top: 11px;
+  box-shadow: 0 0 18px #64e4bd;
+}
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #66dabb;
+  margin-top: 30px;
+  font-weight: 650;
+}
+h1 {
+  font-size: 44px;
+  letter-spacing: -1.6px;
+  line-height: 1.15;
+  margin: 10px 0 12px;
+}
+.intro {
+  color: #9eacc0;
+  margin: 0 0 34px;
+  font-size: 17px;
+}
+section {
+  border: 1px solid #27384c;
+  border-radius: 16px;
+  padding: 24px;
+  background: #111c2b;
+}
+.status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.dot {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background: #66dabb;
+}
+h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+#detail {
+  font-size: 13px;
+  color: #a7b7ca;
+  line-height: 1.6;
+  min-height: 21px;
+}
+progress {
+  height: 5px;
+  width: 100%;
+  appearance: none;
+  border: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #25374b;
+}
+progress::-webkit-progress-bar {
+  background: #25374b;
+}
+progress::-webkit-progress-value {
+  background: #66dabb;
+}
+.note {
+  font-size: 12px;
+  color: #7d8ca2;
+  line-height: 1.8;
+  margin: 22px 2px;
+}
+button {
+  font:
+    600 13px "Segoe UI",
+    sans-serif;
+  border: 1px solid #56caa8;
+  border-radius: 8px;
+  background: #66dabb;
+  color: #091510;
+  padding: 10px 18px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+footer {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #586e89;
+  margin-top: 42px;
+}
+button[hidden] {
+  display: none;
+}

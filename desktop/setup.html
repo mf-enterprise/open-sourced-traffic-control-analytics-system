@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'"
+    />
+    <title>Traffic Control</title>
+    <link rel="stylesheet" href="setup.css" />
+  </head>
+  <body>
+    <main>
+      <div class="mark">TC<span></span></div>
+      <div class="eyebrow">TRAFFIC INTELLIGENCE</div>
+      <h1>Traffic Control</h1>
+      <p class="intro">Your camera. A clearer view of the road.</p>
+      <section>
+        <div class="status">
+          <span class="dot"></span>
+          <h2 id="heading">Preparing your workspace</h2>
+        </div>
+        <p id="detail">Starting the local analysis service…</p>
+        <progress id="progress" max="100"></progress
+        ><button id="retry" hidden>Try again</button>
+      </section>
+      <p class="note">
+        First launch downloads an 83 MB video engine from its upstream release
+        and verifies its SHA-256 checksum. Detection models are included. Your
+        recordings and evidence stay on this computer.
+      </p>
+      <footer>WINDOWS DESKTOP · LOCAL ANALYSIS</footer>
+    </main>
+    <script src="setup.js"></script>
+  </body>
+</html>

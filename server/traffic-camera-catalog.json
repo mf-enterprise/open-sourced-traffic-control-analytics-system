@@ -1,0 +1,128 @@
+[
+  {
+    "id": "cinderford",
+    "name": "Cinderford Triangle",
+    "location": "Gloucestershire",
+    "country": "UK",
+    "road": "Town centre",
+    "provider": "Cinderford public Nest camera",
+    "sourcePage": "https://video.nest.com/live/2VNgNDSgKs",
+    "config": {
+      "type": "nest",
+      "url": "https://video.nest.com/live/2VNgNDSgKs",
+      "name": "Cinderford Triangle"
+    }
+  },
+  {
+    "id": "antigonish",
+    "name": "Antigonish Main Street",
+    "location": "Nova Scotia",
+    "country": "Canada",
+    "road": "Main Street junction",
+    "provider": "Town of Antigonish / ECCU",
+    "sourcePage": "https://www.townofantigonish.ca/",
+    "config": {
+      "type": "nest",
+      "url": "https://video.nest.com/live/srFJAgxtlk",
+      "name": "Antigonish Main Street"
+    }
+  },
+  {
+    "id": "silver-city",
+    "name": "Silver City Downtown",
+    "location": "New Mexico",
+    "country": "USA",
+    "road": "Bullard Street",
+    "provider": "Live From Silver / Terrafox Networks",
+    "sourcePage": "https://livefromsilver.com/",
+    "config": {
+      "type": "url",
+      "url": "https://1-or.vdn.terrafox.net/live/downtown-silver.stream/playlist.m3u8",
+      "name": "Silver City Downtown"
+    }
+  },
+  {
+    "id": "ovando",
+    "name": "Ovando Town Centre",
+    "location": "Montana",
+    "country": "USA",
+    "road": "Main Street",
+    "provider": "Blackfoot Angler",
+    "sourcePage": "https://video.nest.com/live/xJPIRIe9d7",
+    "config": {
+      "type": "nest",
+      "url": "https://video.nest.com/live/xJPIRIe9d7",
+      "name": "Ovando Town Centre"
+    }
+  },
+  {
+    "id": "saint-louis",
+    "name": "Maryland Avenue",
+    "location": "Saint Louis, Missouri",
+    "country": "USA",
+    "road": "Maryland Avenue",
+    "provider": "World Chess Hall of Fame",
+    "sourcePage": "https://video.nest.com/live/w1ceUyyMR6",
+    "config": {
+      "type": "nest",
+      "url": "https://video.nest.com/live/w1ceUyyMR6",
+      "name": "Maryland Avenue"
+    }
+  },
+  {
+    "id": "lake-arrowhead",
+    "name": "Lake Arrowhead Village",
+    "location": "Lake Arrowhead, California",
+    "country": "USA",
+    "road": "Village entrance",
+    "provider": "Vanity Vape / MTN Webcams",
+    "sourcePage": "https://mtnwebcams.com/?webCamId=53",
+    "config": {
+      "type": "nest",
+      "url": "https://video.nest.com/live/0Dth4x9TGK",
+      "name": "Lake Arrowhead Village"
+    }
+  },
+  {
+    "id": "running-springs-havenwood",
+    "name": "Running Springs Highway 18",
+    "location": "Running Springs, California",
+    "country": "USA",
+    "road": "Highway 18",
+    "provider": "Havenwood Gift Shop / MTN Webcams",
+    "sourcePage": "https://mtnwebcams.com/?webCamId=64",
+    "config": {
+      "type": "nest",
+      "url": "https://video.nest.com/live/Deea84kGyR",
+      "name": "Running Springs Highway 18"
+    }
+  },
+  {
+    "id": "running-springs-napa",
+    "name": "Running Springs Hilltop Drive",
+    "location": "Running Springs, California",
+    "country": "USA",
+    "road": "Hilltop Drive junction",
+    "provider": "NAPA Auto / MTN Webcams",
+    "sourcePage": "https://mtnwebcams.com/?webCamId=49",
+    "config": {
+      "type": "nest",
+      "url": "https://video.nest.com/live/IKrtsvobOA",
+      "name": "Running Springs Hilltop Drive"
+    }
+  },
+  {
+    "id": "running-springs-lulubelle",
+    "name": "Running Springs Pleasant Drive",
+    "location": "Running Springs, California",
+    "country": "USA",
+    "road": "Pleasant Drive / Highway 18",
+    "provider": "LuluBelle's Coffee House / MTN Webcams",
+    "sourcePage": "https://mtnwebcams.com/?webCamId=59",
+    "config": {
+      "type": "nest",
+      "url": "https://video.nest.com/live/weDXOofi0X",
+      "name": "Running Springs Pleasant Drive"
+    }
+  }
+]

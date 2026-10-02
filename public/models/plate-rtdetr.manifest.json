@@ -1,0 +1,54 @@
+{
+  "name": "RT-DETRv2-R18 plate candidates",
+  "publisher": "Topurrra",
+  "repository": "https://huggingface.co/Topurrra/rtdetr-license-plate-detection-onnx",
+  "revision": "aecb24a78e31cea03f59b83156d55dde84f20d94",
+  "source": "https://huggingface.co/Topurrra/rtdetr-license-plate-detection-onnx/resolve/aecb24a78e31cea03f59b83156d55dde84f20d94/plate_rtdetr.onnx",
+  "modelCardSource": "https://huggingface.co/Topurrra/rtdetr-license-plate-detection-onnx/raw/aecb24a78e31cea03f59b83156d55dde84f20d94/README.md",
+  "license": "Apache-2.0",
+  "licenseSource": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+  "bytes": 80671879,
+  "sha256": "50f9bf9d7eaa97ade59063ba608107203d0575a84c0fb27e0ebf3bab6f594366",
+  "hashSource": "Official Hugging Face LFS metadata at the pinned revision",
+  "input": {
+    "name": "pixel_values",
+    "shape": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "type": "float32",
+    "channels": "RGB",
+    "range": [
+      0,
+      1
+    ],
+    "resize": "stretch to 640x640; no mean/std normalization"
+  },
+  "outputs": {
+    "logits": {
+      "shape": [
+        1,
+        300,
+        1
+      ],
+      "activation": "sigmoid"
+    },
+    "pred_boxes": {
+      "shape": [
+        1,
+        300,
+        4
+      ],
+      "format": "normalized center-x, center-y, width, height"
+    }
+  },
+  "inference": {
+    "provider": "CPU/WASM",
+    "candidateThreshold": 0.05,
+    "maxCandidates": 5,
+    "nmsIou": 0.5
+  },
+  "limitations": "Plate-region suggestions only. Low model scores are not calibrated correctness probabilities. Human verification and separate scene validation are required."
+}

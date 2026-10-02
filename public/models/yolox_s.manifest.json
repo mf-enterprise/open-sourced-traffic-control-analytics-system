@@ -1,0 +1,40 @@
+{
+  "name": "YOLOX-S",
+  "release": "0.1.1rc0",
+  "source": "https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_s.onnx",
+  "sourceRepository": "https://github.com/Megvii-BaseDetection/YOLOX",
+  "license": "Apache-2.0",
+  "licenseSource": "https://raw.githubusercontent.com/Megvii-BaseDetection/YOLOX/0.1.1rc0/LICENSE",
+  "bytes": 35858002,
+  "sha256": "c5c2d13e59ae883e6af3b45daea64af4833a4951c92d116ec270d9ddbe998063",
+  "input": {
+    "name": "images",
+    "shape": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "type": "float32",
+    "channels": "BGR",
+    "range": [
+      0,
+      255
+    ],
+    "padding": 114,
+    "alignment": "top-left"
+  },
+  "output": {
+    "shape": [
+      1,
+      8400,
+      85
+    ],
+    "decoded": false,
+    "strides": [
+      8,
+      16,
+      32
+    ]
+  }
+}

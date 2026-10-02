@@ -1,0 +1,46 @@
+{
+  "name": "PP-OCRv6_small_rec",
+  "publisher": "PaddlePaddle",
+  "repository": "https://huggingface.co/PaddlePaddle/PP-OCRv6_small_rec_onnx",
+  "revision": "b8f84f0b80c529de40b4fbb3544b84fa7233a513",
+  "source": "https://huggingface.co/PaddlePaddle/PP-OCRv6_small_rec_onnx/resolve/b8f84f0b80c529de40b4fbb3544b84fa7233a513/inference.onnx",
+  "license": "Apache-2.0",
+  "bytes": 21159378,
+  "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+  "hashSource": "Official Hugging Face LFS metadata at the pinned revision",
+  "config": {
+    "source": "https://huggingface.co/PaddlePaddle/PP-OCRv6_small_rec_onnx/resolve/b8f84f0b80c529de40b4fbb3544b84fa7233a513/inference.yml",
+    "sha256": "ab078671bb49f06228eadccd34f1bb501e157f7a047095ffb943ba81512c77d1"
+  },
+  "dictionary": {
+    "path": "plate-recognizer.dictionary.json",
+    "sha256": "a49d51120786924a642c9e8a14b2a2ab73c019699abf5b2b6970ec7355c0415f",
+    "classes": 18710,
+    "blankIndex": 0,
+    "spaceIndex": 18709
+  },
+  "input": {
+    "name": "x",
+    "shape": [
+      1,
+      3,
+      48,
+      "width"
+    ],
+    "channels": "BGR",
+    "normalization": "pixel / 127.5 - 1",
+    "resize": "PaddleX aspect-preserving height 48; width 320..3200; normalized zero right padding"
+  },
+  "output": {
+    "name": "fetch_name_0",
+    "shape": [
+      1,
+      "timesteps",
+      18710
+    ],
+    "activation": "already softmax",
+    "decode": "greedy CTC; collapse adjacent repeated indices then remove blank; mean retained-token probabilities × 100"
+  },
+  "runtime": "ONNX Runtime Web CPU/WASM in isolated worker",
+  "limitations": "Single-line crop OCR; separate scene validation and human verification required. Preserve O/0 and I/1 as read."
+}

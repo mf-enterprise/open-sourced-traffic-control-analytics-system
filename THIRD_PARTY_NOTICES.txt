@@ -1,0 +1,136 @@
+Traffic Control - selected third-party notices and model provenance
+
+Application code is MIT licensed (LICENSE). These notices describe production
+models and runtimes, which retain their own licenses. package-lock.json records
+installed versions. Preserve applicable dependency licenses and notices when
+redistributing a build.
+
+YOLOX-S model
+--------------
+public/models/yolox_s.onnx is the official YOLOX-S ONNX asset from the
+Megvii-BaseDetection/YOLOX 0.1.1rc0 release. The YOLOX project at that release is
+licensed under Apache License 2.0; its exact license text, including the
+Copyright 2021 Megvii, Base Detection attribution, is included at
+public/models/YOLOX-LICENSE.txt. The repository license and model provenance are
+recorded separately from the inference runtime's license below.
+
+Release: https://github.com/Megvii-BaseDetection/YOLOX/releases/tag/0.1.1rc0
+Asset: https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_s.onnx
+License: https://raw.githubusercontent.com/Megvii-BaseDetection/YOLOX/0.1.1rc0/LICENSE
+Local asset size: 35,858,002 bytes
+Locally verified SHA-256: c5c2d13e59ae883e6af3b45daea64af4833a4951c92d116ec270d9ddbe998063
+The hash is a fingerprint of this local asset, not an upstream signature.
+
+RT-DETRv2-R18 plate-region model
+-------------------------------
+public/models/plate-rtdetr.onnx is the unchanged ONNX artifact published by
+Topurrra/rtdetr-license-plate-detection-onnx. The exact pinned model card declares
+Apache License 2.0 and identifies PekingU/rtdetr_v2_r18vd as its Apache-2.0 base.
+The publisher describes fine-tuning on Open Images V7 registration plates;
+training-data attribution is preserved in the original model card. The upstream
+intended use was human-confirmed privacy-redaction region suggestions.
+
+Repository: https://huggingface.co/Topurrra/rtdetr-license-plate-detection-onnx
+Revision: aecb24a78e31cea03f59b83156d55dde84f20d94
+Asset: https://huggingface.co/Topurrra/rtdetr-license-plate-detection-onnx/resolve/aecb24a78e31cea03f59b83156d55dde84f20d94/plate_rtdetr.onnx
+Model card: https://huggingface.co/Topurrra/rtdetr-license-plate-detection-onnx/blob/aecb24a78e31cea03f59b83156d55dde84f20d94/README.md
+Size: 80,671,879 bytes
+SHA-256 verified against the pinned official LFS metadata:
+50f9bf9d7eaa97ade59063ba608107203d0575a84c0fb27e0ebf3bab6f594366
+Local license: public/models/PLATE-RTDETR-LICENSE.txt
+Local original card: public/models/PLATE-RTDETR-MODEL-CARD.txt
+Local adaptation notice: public/models/PLATE-RTDETR-NOTICE.txt
+Local manifest: public/models/plate-rtdetr.manifest.json
+Traffic Control adapts input preparation and output decoding; model weights are unchanged.
+Region scores are not verified text or identity confidence.
+
+PP-OCRv6-small text-recognition model and dictionary
+--------------------------------------------------
+public/models/plate-recognizer.onnx is the unchanged official PaddlePaddle
+PP-OCRv6_small_rec_onnx artifact. The pinned model card declares Apache License
+2.0. The original model card and inference configuration are included. The JSON
+dictionary derives from the exact embedded upstream character list, prepending
+CTC blank and appending space according to PaddleX's decoder. The resulting
+18,710-class vocabulary is separate from the app's Latin registration input guard.
+
+Repository: https://huggingface.co/PaddlePaddle/PP-OCRv6_small_rec_onnx
+Revision: b8f84f0b80c529de40b4fbb3544b84fa7233a513
+Asset: https://huggingface.co/PaddlePaddle/PP-OCRv6_small_rec_onnx/resolve/b8f84f0b80c529de40b4fbb3544b84fa7233a513/inference.onnx
+Model card: https://huggingface.co/PaddlePaddle/PP-OCRv6_small_rec_onnx/blob/b8f84f0b80c529de40b4fbb3544b84fa7233a513/README.md
+Configuration: https://huggingface.co/PaddlePaddle/PP-OCRv6_small_rec_onnx/blob/b8f84f0b80c529de40b4fbb3544b84fa7233a513/inference.yml
+Size: 21,159,378 bytes
+SHA-256 verified against the pinned official LFS metadata:
+5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634
+Local license: public/models/PP-OCRV6-LICENSE.txt
+Local original card/configuration: public/models/PP-OCRV6-MODEL-CARD.txt and PP-OCRV6-CONFIG.txt
+Local adaptation notice: public/models/PP-OCRV6-NOTICE.txt
+Local manifest and derived dictionary: public/models/plate-recognizer.manifest.json and plate-recognizer.dictionary.json
+
+Traffic Control implements BGR preprocessing and CTC decoding following the Apache-2.0
+PaddlePaddle/PaddleX and PaddlePaddle/PaddleOCR projects:
+https://github.com/PaddlePaddle/PaddleX/blob/c50f5da858020db473a2285f089bb8c7bbd6afdc/paddlex/inference/models/text_recognition/processors.py
+https://github.com/PaddlePaddle/PaddleOCR/blob/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/ppocr/modeling/heads/rec_ctc_head.py
+Recognition scores remain original mean retained-token probabilities. These
+licenses and notices do not assert model accuracy, verified identity, owner
+registry access, or endorsement by the model publishers.
+
+ONNX Runtime Web and Node
+-------------------------
+onnxruntime-web and onnxruntime-node 1.30.0 are licensed under the MIT License.
+Copyright (c) Microsoft Corporation.
+The exact upstream v1.30.0 license is included at public/onnxruntime-LICENSE.txt.
+Preserve the copyright and permission notices with redistributed copies or
+substantial portions of the runtime. Its dependencies have their own notices.
+
+Project: https://github.com/microsoft/onnxruntime
+License: https://raw.githubusercontent.com/microsoft/onnxruntime/v1.30.0/LICENSE
+Package: https://raw.githubusercontent.com/microsoft/onnxruntime/v1.30.0/js/web/package.json
+
+Native preview and evidence encoding
+-----------------------------------
+sharp 0.35.5 is used to encode local JPEG previews and evidence in the background
+monitor. The sharp package declares Apache-2.0; its bundled libvips and image
+codec dependencies retain their own licenses and notices. Preserve the installed
+platform package notices when distributing the native application.
+Project and license: https://github.com/lovell/sharp
+Documentation: https://sharp.pixelplumbing.com
+
+FFmpeg camera gateway
+---------------------
+The source development setup uses ffmpeg-static 5.3.0, whose package declares
+GPL-3.0-or-later and downloads a platform-specific FFmpeg executable during
+installation. The inspected Windows executable is FFmpeg 6.1.1,
+6.1.1-essentials_build-www.gyan.dev, compiled with --enable-gpl,
+--enable-version3, and --enable-libx264; its license output states GPL version 3
+or later. The gateway uses libx264. Other platforms or dependency configurations
+can select a different build and must be checked separately.
+
+Redistributing this executable requires compliance with its applicable GPL
+license, including license notices and the corresponding-source requirements
+for the exact binary and linked components. This project does not include a
+complete corresponding-source distribution or a source offer for that binary.
+The party distributing a packaged build is responsible for supplying an
+appropriate compliant source arrangement and preserving third-party notices;
+a link to an upstream homepage alone is not a declaration of compliance.
+Review relevant codec rights as well. The permissive detector/runtime licenses
+do not remove the FFmpeg binary's separate redistribution obligations.
+
+Package/build notes: https://github.com/eugeneware/ffmpeg-static
+Binary release: https://github.com/eugeneware/ffmpeg-static/releases/tag/b6.1.1
+Windows build provider: https://www.gyan.dev/ffmpeg/builds/
+FFmpeg licensing: https://ffmpeg.org/legal.html
+GPL version 3: https://www.gnu.org/licenses/gpl-3.0.html
+
+Windows desktop distribution
+----------------------------
+The Windows ZIP does not contain FFmpeg or ffmpeg-static. On first launch, the
+application downloads the pinned upstream FFmpeg executable directly to the
+user cache and verifies its SHA-256. The download URL, version, expected hash,
+and upstream notices are declared in desktop/runtime.mjs.
+
+Electron and Chromium licenses ship beside the executable. Native dependency
+licenses remain in their package folders; desktop packaging also produces an
+inventory and copied licenses for bundled browser and backend dependencies.
+Public camera streams belong to their providers and are not relicensed under
+the application license. The camera directory includes source attribution.
+

@@ -1,0 +1,19 @@
+Optional RT-DETRv2-R18 license-plate candidate detector
+
+Model publisher: Topurrra. Model card declares Apache License 2.0.
+Base model: PekingU/rtdetr_v2_r18vd (Apache-2.0).
+Model card describes fine-tuning on Open Images V7 vehicle registration plates.
+Training-image and annotation attribution are described in the preserved model card.
+
+Repository: https://huggingface.co/Topurrra/rtdetr-license-plate-detection-onnx
+Pinned revision: aecb24a78e31cea03f59b83156d55dde84f20d94
+Original asset: https://huggingface.co/Topurrra/rtdetr-license-plate-detection-onnx/resolve/aecb24a78e31cea03f59b83156d55dde84f20d94/plate_rtdetr.onnx
+SHA-256: 50f9bf9d7eaa97ade59063ba608107203d0575a84c0fb27e0ebf3bab6f594366
+The ONNX model is redistributed without weight changes.
+See PLATE-RTDETR-LICENSE.txt and PLATE-RTDETR-MODEL-CARD.txt.
+
+Traffic Control adapts preprocessing and output decoding for optional local inference.
+Outputs are unverified plate-region candidates, not verified text or vehicle identity.
+The model does not identify an owner or access a registration database.
+The source model was intended for human-confirmed privacy-redaction suggestions.
+No endorsement or deployment accuracy is implied.

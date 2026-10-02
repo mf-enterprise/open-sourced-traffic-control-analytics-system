@@ -1,0 +1,149 @@
+.vehicle-inspector {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 24px;
+}
+.vehicle-inspection-context,
+.vehicle-inspection-reader {
+  min-width: 0;
+}
+.vehicle-inspection-reader .plate-crop-surface {
+  width: min(100%, var(--vehicle-crop-surface-width, 100%));
+  margin-inline: auto;
+}
+.vehicle-inspection-frame {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #405653;
+  border-radius: 8px;
+  background: #0c1518;
+}
+.vehicle-inspection-frame > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.vehicle-inspection-box {
+  position: absolute;
+  border: 2px solid;
+  pointer-events: none;
+  box-shadow: 0 0 0 1px #0007;
+}
+.vehicle-inspection-frame figcaption {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  padding: 5px 7px;
+  border-radius: 3px;
+  background: #0b151de8;
+  color: #d7e7d8;
+  font:
+    9px/1.4 "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.5px;
+}
+.vehicle-inspection-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 16px;
+  margin: 22px 0;
+}
+.vehicle-inspection-details dt {
+  color: #819ca4;
+  font-size: 10px;
+  line-height: 1.5;
+}
+.vehicle-inspection-details dd {
+  color: #d2e3cf;
+  margin: 5px 0 0;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.vehicle-inspection-note,
+.vehicle-inspection-reader-intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px;
+  background: #0f1a1e;
+  border: 1px solid #31464a;
+  border-radius: 7px;
+}
+.vehicle-inspection-note svg,
+.vehicle-inspection-reader-intro svg {
+  flex-shrink: 0;
+  color: #c6dfaf;
+  margin-top: 2px;
+}
+.vehicle-inspection-note p,
+.vehicle-inspection-reader-intro p,
+.vehicle-inspection-candidate p {
+  margin: 0;
+  color: #94aab0;
+  font-size: 11px;
+  line-height: 1.7;
+}
+.vehicle-inspection-reader-intro h3 {
+  color: #d4e4d4;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0 0 7px;
+}
+.vehicle-inspection-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+.vehicle-inspection-downloads .button {
+  padding: 10px 12px;
+  font-size: 11px;
+}
+.vehicle-inspection-loading,
+.vehicle-inspection-error,
+.vehicle-inspection-unavailable {
+  padding: 20px;
+  background: #101b1f;
+  border: 1px solid #334950;
+  border-radius: 7px;
+  color: #98afb3;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.vehicle-inspection-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 160px;
+}
+.vehicle-inspection-error {
+  color: #ffc19d;
+  border-color: #86523b;
+}
+.vehicle-inspection-candidate {
+  border: 1px solid #8e7941;
+  border-radius: 7px;
+  padding: 15px;
+  margin-top: 14px;
+}
+.vehicle-inspection-candidate span {
+  display: block;
+  color: #d1ba82;
+  font-size: 10px;
+}
+.vehicle-inspection-candidate strong {
+  display: block;
+  color: #f0dfb1;
+  font:
+    20px/1.6 "IBM Plex Mono",
+    monospace;
+  margin: 5px 0;
+}
+@media (max-width: 800px) {
+  .vehicle-inspector {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+}

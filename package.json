@@ -1,0 +1,53 @@
+{
+  "name": "traffic-control",
+  "private": true,
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "main": "desktop/main.mjs",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "setup:vision": "node scripts/setup-models.mjs && node scripts/build-server-vision.mjs",
+    "pretest": "node scripts/build-server-vision.mjs",
+    "setup:plates": "node scripts/fetch-plate-model.mjs",
+    "predev": "npm run setup:vision",
+    "prebuild": "npm run setup:vision",
+    "dev": "node scripts/dev.mjs",
+    "start": "node server/index.mjs --static",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "server": "node server/index.mjs",
+    "test": "vitest run src && node --test server/tests.mjs server/*.test.mjs desktop/*.test.mjs",
+    "desktop:dev": "node node_modules/electron/install.js && npm run setup:plates && npm run build && electron .",
+    "desktop:build": "node node_modules/electron/install.js && npm run setup:plates && npm run build && node desktop/build.mjs",
+    "desktop:smoke": "node desktop/smoke.mjs"
+  },
+  "dependencies": {
+    "@tensorflow-models/coco-ssd": "^2.2.3",
+    "@tensorflow/tfjs": "^4.22.0",
+    "ffmpeg-static": "^5.3.0",
+    "hls.js": "^1.7.3",
+    "lucide-react": "^0.468.0",
+    "onnxruntime-node": "1.30.0",
+    "onnxruntime-web": "^1.30.0",
+    "onvif": "^0.8.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sharp": "0.35.5",
+    "tesseract.js": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "44.5.1",
+    "electron-builder": "26.15.3",
+    "esbuild": "^0.25.12",
+    "prettier": "^3.9.9",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5",
+    "vitest": "^4.1.11"
+  }
+}

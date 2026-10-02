@@ -1,0 +1,111 @@
+{
+  "entries": [
+    {
+      "file": "ONNX-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/microsoft/onnxruntime/v1.30.0/LICENSE",
+      "packages": ["onnxruntime-node", "onnxruntime-common", "onnxruntime-web"],
+      "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c"
+    },
+    {
+      "file": "ONNX-ThirdPartyNotices.txt",
+      "url": "https://raw.githubusercontent.com/microsoft/onnxruntime/v1.30.0/ThirdPartyNotices.txt",
+      "packages": ["onnxruntime-node", "onnxruntime-common", "onnxruntime-web"],
+      "sha256": "143764b952fdb1a7c69ce653bfba74a7744d6a8a573bfb73e235fba356c83de3"
+    },
+    {
+      "file": "TFJS-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/tensorflow/tfjs/tfjs-v4.22.0/LICENSE",
+      "packages": [
+        "@tensorflow/tfjs",
+        "@tensorflow/tfjs-backend-cpu",
+        "@tensorflow/tfjs-backend-webgl",
+        "@tensorflow/tfjs-converter",
+        "@tensorflow/tfjs-core",
+        "@tensorflow/tfjs-data",
+        "@tensorflow/tfjs-layers"
+      ],
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "file": "TFJS-LAYERS-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/tensorflow/tfjs/tfjs-v4.22.0/tfjs-layers/LICENSE",
+      "packages": ["@tensorflow/tfjs-layers"],
+      "sha256": "a79c269bc0e74de72571cea54c5f92ed74cbc6e8d1250a9fdb40357383d9dc4b"
+    },
+    {
+      "file": "COCO-SSD-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/tensorflow/tfjs-models/coco-ssd-v2.2.3/LICENSE",
+      "packages": ["@tensorflow-models/coco-ssd"],
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    },
+    {
+      "file": "TR46-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/jsdom/tr46/3a6f29721e7063b9ffd421e461a54beae6170001/LICENSE.md",
+      "packages": ["tr46"],
+      "sha256": "eeed1ca176eebad5c73870e233cfff03981fecd319c969475dfa3633036c336b"
+    },
+    {
+      "file": "ISC.txt",
+      "url": "https://raw.githubusercontent.com/spdx/license-list-data/v3.28.0/text/ISC.txt",
+      "packages": ["guid-typescript"],
+      "sha256": "f2ec607f67bb0dd3053b49835b02110d5cd0f8eb6da3aac4dc0b142a6b299be9"
+    },
+    {
+      "file": "SEEDRANDOM-LICENSE.txt",
+      "source": "seedrandom@3.0.5/seedrandom.js license header",
+      "packages": ["seedrandom"],
+      "sha256": "54624bc262234371635aacf512f779e523fc06412869108d0758b71569f7c41a"
+    },
+    {
+      "file": "DIRECTML-LICENSE.txt",
+      "url": "https://api.nuget.org/v3-flatcontainer/microsoft.ai.directml/1.15.4/microsoft.ai.directml.1.15.4.nupkg",
+      "member": "LICENSE.txt",
+      "packages": ["onnxruntime-node"],
+      "sha256": "a05138e3a085ff60a44881eedfa58dccb03ecc1d7b1f6ae888418e8c2fec4b8d",
+      "binaryVersion": "1.15.4",
+      "installedDllSha256": "234e8898778cdec88d3cb0539508273494082812c968699f3de665a018971625",
+      "executableContentMatches": true,
+      "binaryComparison": "PE executable payload matches; Authenticode certificate and checksum differ."
+    },
+    {
+      "file": "DIRECTML-LICENSE-CODE.txt",
+      "url": "https://api.nuget.org/v3-flatcontainer/microsoft.ai.directml/1.15.4/microsoft.ai.directml.1.15.4.nupkg",
+      "member": "LICENSE-CODE.txt",
+      "packages": ["onnxruntime-node"],
+      "sha256": "903df5512f7d02609fed0c780a9b704f5a3eeb6e4d84ebe42a29845c81899a3c",
+      "binaryVersion": "1.15.4",
+      "installedDllSha256": "234e8898778cdec88d3cb0539508273494082812c968699f3de665a018971625",
+      "executableContentMatches": true,
+      "binaryComparison": "PE executable payload matches; Authenticode certificate and checksum differ."
+    },
+    {
+      "file": "DIRECTML-ThirdPartyNotices.txt",
+      "url": "https://api.nuget.org/v3-flatcontainer/microsoft.ai.directml/1.15.4/microsoft.ai.directml.1.15.4.nupkg",
+      "member": "ThirdPartyNotices.txt",
+      "packages": ["onnxruntime-node"],
+      "sha256": "2c95795c13ff48a58b6ed916f37901c23d964b5d9d601af422f17ad2172e7950",
+      "binaryVersion": "1.15.4",
+      "installedDllSha256": "234e8898778cdec88d3cb0539508273494082812c968699f3de665a018971625",
+      "executableContentMatches": true,
+      "binaryComparison": "PE executable payload matches; Authenticode certificate and checksum differ."
+    },
+    {
+      "file": "GPL-3.0.txt",
+      "url": "https://raw.githubusercontent.com/spdx/license-list-data/v3.28.0/text/GPL-3.0-or-later.txt",
+      "packages": ["@img/sharp-win32-x64"],
+      "sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0"
+    },
+    {
+      "file": "LGPL-3.0.txt",
+      "url": "https://raw.githubusercontent.com/spdx/license-list-data/v3.28.0/text/LGPL-3.0-or-later.txt",
+      "packages": ["@img/sharp-win32-x64"],
+      "sha256": "996af0513df21f7496288951c41428a03c174e9e4a9d63665c57d670f845ccb1"
+    },
+    {
+      "file": "SHARP-NATIVE-NOTICES.md",
+      "source": "@img/sharp-win32-x64@0.35.5/README.md",
+      "packages": ["@img/sharp-win32-x64"],
+      "sha256": "3d083ada5ebafe1e6c227daa7b061d4254b61df4a3901c359ffdeac817ce5866"
+    }
+  ]
+}

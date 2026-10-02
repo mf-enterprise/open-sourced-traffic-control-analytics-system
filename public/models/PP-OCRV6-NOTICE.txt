@@ -1,0 +1,15 @@
+PP-OCRv6_small_rec — official PaddlePaddle ONNX recognition model
+Copyright and attribution: PaddlePaddle / PaddleOCR contributors.
+The official model card declares Apache License 2.0; see PP-OCRV6-LICENSE.txt.
+Repository: https://huggingface.co/PaddlePaddle/PP-OCRv6_small_rec_onnx
+Revision: b8f84f0b80c529de40b4fbb3544b84fa7233a513
+Original model: https://huggingface.co/PaddlePaddle/PP-OCRv6_small_rec_onnx/resolve/b8f84f0b80c529de40b4fbb3544b84fa7233a513/inference.onnx
+Model SHA-256 (official LFS metadata): 5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634
+Weights are redistributed without changes.
+The full original model card and inference configuration are preserved alongside the model.
+The JSON vocabulary is derived from the embedded official dictionary, with blank and space tokens added following PaddleX CTCLabelDecode.
+Traffic Control implements BGR preprocessing and CTC decoding following these Apache-2.0 sources:
+https://github.com/PaddlePaddle/PaddleX/blob/c50f5da858020db473a2285f089bb8c7bbd6afdc/paddlex/inference/models/text_recognition/processors.py
+https://github.com/PaddlePaddle/PaddleOCR/blob/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/ppocr/modeling/heads/rec_ctc_head.py
+Predictions are unverified text suggestions. Model scores are not calibrated identity probabilities.
+No owner-registry access, official identification, endorsement, or deployment accuracy is implied.
